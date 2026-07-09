@@ -1,0 +1,99 @@
+/* ===== Basic settings ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;   /* simple light gray */
+  /* Center the box with flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===== The calculator box ===== */
+.calculator {
+  background-color: #333333;   /* dark gray */
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+}
+
+/* ===== Display ===== */
+#display {
+  background-color: #d7f5d7;   /* light green like old calculators */
+  color: #000000;
+  font-size: 30px;
+  text-align: right;           /* numbers aligned to the right */
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  min-height: 30px;
+  overflow: hidden;
+}
+
+/* ===== Button grid (simple grid) ===== */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* ===== Basic style for all buttons ===== */
+button {
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e0e0e0;   /* light gray for numbers */
+  color: #000000;
+  user-select: none;
+  transition: opacity 0.2s;    /* the only simple transition */
+}
+
+/* simple hover effect */
+button:hover {
+  opacity: 0.8;
+}
+
+/* ===== Colors for special buttons ===== */
+.operator {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+.equals {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.clear {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.backspace {
+  background-color: #607d8b;
+  color: #ffffff;
+}
+
+/* C and Backspace should span two columns */
+.wide {
+  grid-column: span 2;
+}
+
+/* ===== Mobile adjustment ===== */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+  button {
+    font-size: 18px;
+    padding: 12px;
+  }
+}

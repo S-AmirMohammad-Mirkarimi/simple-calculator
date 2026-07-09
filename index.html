@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main container (the box in the middle) -->
+  <div class="calculator">
+
+    <!-- Display: shows the number or the result -->
+    <div id="display">0</div>
+
+    <!-- Button grid -->
+    <div class="buttons">
+
+      <!-- Row 1 -->
+      <button class="number" onclick="inputNumber('7')">7</button>
+      <button class="number" onclick="inputNumber('8')">8</button>
+      <button class="number" onclick="inputNumber('9')">9</button>
+      <button class="operator" onclick="chooseOperator('/')">÷</button>
+
+      <!-- Row 2 -->
+      <button class="number" onclick="inputNumber('4')">4</button>
+      <button class="number" onclick="inputNumber('5')">5</button>
+      <button class="number" onclick="inputNumber('6')">6</button>
+      <button class="operator" onclick="chooseOperator('*')">×</button>
+
+      <!-- Row 3 -->
+      <button class="number" onclick="inputNumber('1')">1</button>
+      <button class="number" onclick="inputNumber('2')">2</button>
+      <button class="number" onclick="inputNumber('3')">3</button>
+      <button class="operator" onclick="chooseOperator('-')">−</button>
+
+      <!-- Row 4 -->
+      <button class="number" onclick="inputNumber('0')">0</button>
+      <button class="number" onclick="inputDecimal()">.</button>
+      <button class="equals" onclick="equals()">=</button>
+      <button class="operator" onclick="chooseOperator('+')">+</button>
+
+      <!-- Row 5: C clears everything, Backspace deletes the last digit -->
+      <button class="clear wide" onclick="clearAll()">C</button>
+      <button class="backspace wide" onclick="backspace()">⌫</button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
